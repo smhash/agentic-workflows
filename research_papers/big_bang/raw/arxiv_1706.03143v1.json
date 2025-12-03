@@ -1,0 +1,45 @@
+{
+  "source": "arxiv",
+  "query": "Big Bang",
+  "fetched_at": "2025-11-21T13:44:40.759176",
+  "title": "Review on Effects of Long-lived Negatively Charged Massive Particles on Big Bang Nucleosynthesis",
+  "url": "http://arxiv.org/abs/1706.03143v1",
+  "content": "We review important reactions in the big bang nucleosynthesis (BBN) model involving a long-lived negatively charged massive particle, $X^-$, which is much heavier than nucleons. This model can explain the observed $^7$Li abundances of metal-poor stars, and predicts a primordial $^9$Be abundance that is larger than the standard BBN prediction. In the BBN epoch, nuclei recombine with the $X^-$ particle. Because of the heavy $X^-$ mass, the atomic size of bound states $A_X$ is as small as the nuclear size. The nonresonant recombination rates are then dominated by the $d$-wave $\\rightarrow$ 2P transition for $^7$Li and $^{7,9}$Be. The $^7$Be destruction occurs via a recombination with the $X^-$ followed by a proton capture, and the primordial $^7$Li abundance is reduced. Also, the $^9$Be production occurs via the recombination of $^7$Li and $X^-$ followed by deuteron capture. The initial abundance and the lifetime of the $X^-$ particles are constrained from a BBN reaction network calculation. We estimate that the derived parameter region for the $^7$Li reduction is allowed in supersymmetric or Kaluza-Klein (KK) models. We find that either the selectron, smuon, KK electron or KK muon could be candidates for the $X^-$ with $m_X\\sim {\\mathcal O}(1)$ TeV, while the stau and KK tau cannot.",
+  "authors": [
+    "Motohiko Kusakabe",
+    "Grant. J. Mathews",
+    "Toshitaka Kajino",
+    "Myung-Ki Cheoun"
+  ],
+  "summary": "We review important reactions in the big bang nucleosynthesis (BBN) model involving a long-lived negatively charged massive particle, $X^-$, which is much heavier than nucleons. This model can explain the observed $^7$Li abundances of metal-poor stars, and predicts a primordial $^9$Be abundance that is larger than the standard BBN prediction. In the BBN epoch, nuclei recombine with the $X^-$ particle. Because of the heavy $X^-$ mass, the atomic size of bound states $A_X$ is as small as the nuclear size. The nonresonant recombination rates are then dominated by the $d$-wave $\\rightarrow$ 2P transition for $^7$Li and $^{7,9}$Be. The $^7$Be destruction occurs via a recombination with the $X^-$ followed by a proton capture, and the primordial $^7$Li abundance is reduced. Also, the $^9$Be production occurs via the recombination of $^7$Li and $X^-$ followed by deuteron capture. The initial abundance and the lifetime of the $X^-$ particles are constrained from a BBN reaction network calculation. We estimate that the derived parameter region for the $^7$Li reduction is allowed in supersymmetric or Kaluza-Klein (KK) models. We find that either the selectron, smuon, KK electron or KK muon could be candidates for the $X^-$ with $m_X\\sim {\\mathcal O}(1)$ TeV, while the stau and KK tau cannot.",
+  "pdf_url": "https://arxiv.org/pdf/1706.03143v1",
+  "entry_id": "http://arxiv.org/abs/1706.03143v1",
+  "published": "2017-06-09",
+  "updated": "2017-06-09",
+  "comment": "27 pages, 7 figures, submitted for a special issue on Big Bang Nucleosynthesis",
+  "journal_ref": null,
+  "doi": "10.1142/S021830131741004X",
+  "primary_category": "astro-ph.CO",
+  "categories": [
+    "astro-ph.CO"
+  ],
+  "links": [
+    {
+      "href": "https://arxiv.org/abs/1706.03143v1",
+      "rel": "alternate",
+      "title": null
+    },
+    {
+      "href": "https://arxiv.org/pdf/1706.03143v1",
+      "rel": "related",
+      "title": "pdf"
+    },
+    {
+      "href": "https://doi.org/10.1142/S021830131741004X",
+      "rel": "related",
+      "title": "doi"
+    }
+  ],
+  "link_pdf": "https://arxiv.org/pdf/1706.03143v1",
+  "paper_id": "1706.03143v1"
+}

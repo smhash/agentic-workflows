@@ -1,0 +1,31 @@
+[project]
+name = "researchagent-mcp"
+version = "0.1.0"
+description = "A multi-agent research workflow system with specialized agents for planning, research, writing, and editing"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=1.0.0",
+    "arxiv>=2.2.0",
+    "mcp>=1.21.0",
+    "nest-asyncio>=1.6.0",
+    "python-dotenv>=1.1.0",
+    "wikipedia>=1.4.0",
+    "requests>=2.32.0",
+    "pypdf>=3.0.0",
+]
+
+[project.scripts]
+research-workflow = "src.main:main"
+research-server = "src.research_mcp_server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"

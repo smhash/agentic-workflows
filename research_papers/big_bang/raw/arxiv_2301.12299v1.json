@@ -1,0 +1,39 @@
+{
+  "source": "arxiv",
+  "query": "Big Bang",
+  "fetched_at": "2025-11-21T13:44:40.758829",
+  "title": "Big Bang Nucleosynthesis",
+  "url": "http://arxiv.org/abs/2301.12299v1",
+  "content": "As the early universe expands and cools the rates of the weak interactions that keep neutrinos in thermal equilibrium with the matter and the related rates of the reactions that inter-convert neutrons and protons decrease. Eventually, these rates fall below the expansion rate -- they freeze out. Likewise, the rates of the strong and electromagnetic nuclear reactions that build up and tear down nuclei, though fast enough to maintain equilibrium early on, slow down and ultimately lead to freeze out. Together these freeze out processes comprise the epoch of Big Bang Nucleosynthesis (BBN). The relics emerging from this early time include the light element abundances, for example of helium and deuterium, and a background of decoupled neutrinos, a \"C$\u03bd$B\" , roughly analogous to the Cosmic Microwave Background, the CMB. These fossil relics encode the history of the physics operating in the early universe. Consequently, BBN has emerged as a key tool for constraining new, beyond-standard-model (BSM) physics. BBN may become an even finer probe of BSM physics, given the anticipated higher precision in measurements of the primordial abundances of deuterium and helium afforded by the advent of large optical telescopes and Stage-4 CMB experiments. The latter experiments will also provide higher precision determinations of $N_{\\rm eff}$, a measure of the relativistic energy density at the photon decoupling epoch and, hence, an important probe of the C$\u03bd$B.",
+  "authors": [
+    "Evan Grohs",
+    "George M. Fuller"
+  ],
+  "summary": "As the early universe expands and cools the rates of the weak interactions that keep neutrinos in thermal equilibrium with the matter and the related rates of the reactions that inter-convert neutrons and protons decrease. Eventually, these rates fall below the expansion rate -- they freeze out. Likewise, the rates of the strong and electromagnetic nuclear reactions that build up and tear down nuclei, though fast enough to maintain equilibrium early on, slow down and ultimately lead to freeze out. Together these freeze out processes comprise the epoch of Big Bang Nucleosynthesis (BBN). The relics emerging from this early time include the light element abundances, for example of helium and deuterium, and a background of decoupled neutrinos, a \"C$\u03bd$B\" , roughly analogous to the Cosmic Microwave Background, the CMB. These fossil relics encode the history of the physics operating in the early universe. Consequently, BBN has emerged as a key tool for constraining new, beyond-standard-model (BSM) physics. BBN may become an even finer probe of BSM physics, given the anticipated higher precision in measurements of the primordial abundances of deuterium and helium afforded by the advent of large optical telescopes and Stage-4 CMB experiments. The latter experiments will also provide higher precision determinations of $N_{\\rm eff}$, a measure of the relativistic energy density at the photon decoupling epoch and, hence, an important probe of the C$\u03bd$B.",
+  "pdf_url": "https://arxiv.org/pdf/2301.12299v1",
+  "entry_id": "http://arxiv.org/abs/2301.12299v1",
+  "published": "2023-01-28",
+  "updated": "2023-01-28",
+  "comment": "Short review on Big Bang Nucleosynthesis for the Handbook of Nuclear Physics. 23 pages, 2 figures",
+  "journal_ref": null,
+  "doi": null,
+  "primary_category": "astro-ph.CO",
+  "categories": [
+    "astro-ph.CO",
+    "hep-ph"
+  ],
+  "links": [
+    {
+      "href": "https://arxiv.org/abs/2301.12299v1",
+      "rel": "alternate",
+      "title": null
+    },
+    {
+      "href": "https://arxiv.org/pdf/2301.12299v1",
+      "rel": "related",
+      "title": "pdf"
+    }
+  ],
+  "link_pdf": "https://arxiv.org/pdf/2301.12299v1",
+  "paper_id": "2301.12299v1"
+}

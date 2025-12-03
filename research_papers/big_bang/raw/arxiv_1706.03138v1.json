@@ -1,0 +1,44 @@
+{
+  "source": "arxiv",
+  "query": "Big Bang",
+  "fetched_at": "2025-11-21T13:44:40.758099",
+  "title": "Introduction to Big Bang Nucleosynthesis and Modern Cosmology",
+  "url": "http://arxiv.org/abs/1706.03138v1",
+  "content": "Primordial nucleosynthesis remains as one of the pillars of modern cosmology. It is the testing ground upon which many cosmological models must ultimately rest. It is our only probe of the universe during the important radiation-dominated epoch in the first few minutes of cosmic expansion. This chapter reviews the basic equations of space-time, cosmology, and big bang nucleosynthesis. We also summarize the current state of observational constraints on primordial abundances along with the key nuclear reactions and their uncertainties. We summarize which nuclear measurements are most crucial during the big bang. We also review various cosmological models and their constraints. In particular, we analyze the constraints that big bang nucleosynthesis places upon the possible time variation of fundamental constants, along with constraints on the nature and origin of dark matter and dark energy, long-lived supersymmetric particles, gravity waves, and the primordial magnetic field.",
+  "authors": [
+    "Grant J. Mathews",
+    "Motohiko Kusakabe",
+    "Toshitaka Kajino"
+  ],
+  "summary": "Primordial nucleosynthesis remains as one of the pillars of modern cosmology. It is the testing ground upon which many cosmological models must ultimately rest. It is our only probe of the universe during the important radiation-dominated epoch in the first few minutes of cosmic expansion. This chapter reviews the basic equations of space-time, cosmology, and big bang nucleosynthesis. We also summarize the current state of observational constraints on primordial abundances along with the key nuclear reactions and their uncertainties. We summarize which nuclear measurements are most crucial during the big bang. We also review various cosmological models and their constraints. In particular, we analyze the constraints that big bang nucleosynthesis places upon the possible time variation of fundamental constants, along with constraints on the nature and origin of dark matter and dark energy, long-lived supersymmetric particles, gravity waves, and the primordial magnetic field.",
+  "pdf_url": "https://arxiv.org/pdf/1706.03138v1",
+  "entry_id": "http://arxiv.org/abs/1706.03138v1",
+  "published": "2017-06-09",
+  "updated": "2017-06-09",
+  "comment": "21 pages, 1 figure, submitted for a special issue on Big Bang Nucleosynthesis",
+  "journal_ref": null,
+  "doi": "10.1142/S0218301317410014",
+  "primary_category": "astro-ph.CO",
+  "categories": [
+    "astro-ph.CO"
+  ],
+  "links": [
+    {
+      "href": "https://arxiv.org/abs/1706.03138v1",
+      "rel": "alternate",
+      "title": null
+    },
+    {
+      "href": "https://arxiv.org/pdf/1706.03138v1",
+      "rel": "related",
+      "title": "pdf"
+    },
+    {
+      "href": "https://doi.org/10.1142/S0218301317410014",
+      "rel": "related",
+      "title": "doi"
+    }
+  ],
+  "link_pdf": "https://arxiv.org/pdf/1706.03138v1",
+  "paper_id": "1706.03138v1"
+}

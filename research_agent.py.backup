@@ -1,0 +1,195 @@
+from dotenv import load_dotenv
+from openai import OpenAI
+import json
+import asyncio
+import nest_asyncio
+from .mcp_client import MCPClient
+from .chat_interface import ChatInterface
+
+nest_asyncio.apply()
+
+load_dotenv()
+
+class ResearchAgent:
+    def __init__(self):
+        self.openai = OpenAI()
+        self.mcp_client = MCPClient()
+
+    async def process_query(self, query):
+        # Add system message to encourage tool use for research queries
+        messages = [
+            {
+                'role': 'system',
+                'content': 'You are a research assistant. When users ask about topics, you should search for academic papers using the available tools rather than relying solely on your training data. Use the search_papers tool to find relevant research papers on any topic the user mentions.'
+            },
+            {'role': 'user', 'content': query}
+        ]
+        
+        # Convert MCP tools to OpenAI format
+        openai_tools = []
+        for tool in self.mcp_client.available_tools:
+            openai_tools.append({
+                "type": "function",
+                "function": {
+                    "name": tool["name"],
+                    "description": tool["description"],
+                    "parameters": tool["input_schema"]
+                }
+            })
+        
+        while True:
+            response = self.openai.chat.completions.create(
+                model='gpt-4o',
+                messages=messages,
+                tools=openai_tools if openai_tools else None,
+                tool_choice="auto"
+            )
+            
+            message = response.choices[0].message
+            
+            # Print text content if present
+            if message.content:
+                print("\n--- Response ---")
+                print(message.content)
+            
+            # Check for tool calls
+            if message.tool_calls:
+                # Add assistant message with tool calls
+                assistant_msg = {
+                    "role": "assistant",
+                    "content": message.content,
+                    "tool_calls": [
+                        {
+                            "id": tc.id,
+                            "type": tc.type,
+                            "function": {
+                                "name": tc.function.name,
+                                "arguments": tc.function.arguments
+                            }
+                        }
+                        for tc in message.tool_calls
+                    ]
+                }
+                messages.append(assistant_msg)
+                print(f"\n--- Messages ---\n{json.dumps(messages, indent=2)}")
+                
+                # Process each tool call
+                for tool_call in message.tool_calls:
+                    tool_name = tool_call.function.name
+                    tool_args = json.loads(tool_call.function.arguments)  # Parse JSON string
+                    
+                    # Get session and call tool
+                    session = self.mcp_client.get_session_for_tool(tool_name)
+                    if not session:
+                        print(f"Tool '{tool_name}' not found.")
+                        continue
+                    
+                    # Call the tool
+                    result = await session.call_tool(tool_name, arguments=tool_args)
+                    
+                    # Convert result content to string
+                    if isinstance(result.content, list):
+                        content_str = "\n".join(
+                            item.text if hasattr(item, 'text') else str(item)
+                            for item in result.content
+                        )
+                    else:
+                        content_str = str(result.content)
+                    
+                    # Add tool result
+                    messages.append({
+                        "role": "tool",
+                        "tool_call_id": tool_call.id,
+                        "content": content_str
+                    })
+                
+                # Print messages after tool result is added
+                print(f"\n--- Messages (after tool result) ---\n{json.dumps(messages, indent=2)}")
+            else:
+                # No tool calls, exit loop
+                break
+
+    async def get_resource(self, resource_uri):
+        session = self.mcp_client.get_session_for_resource(resource_uri)
+        
+        if not session:
+            print(f"Resource '{resource_uri}' not found.")
+            return
+        
+        try:
+            result = await session.read_resource(uri=resource_uri)
+            if result and result.contents:
+                print(f"\nResource: {resource_uri}")
+                print("Content:")
+                print(result.contents[0].text)
+            else:
+                print("No content available.")
+        except Exception as e:
+            print(f"Error: {e}")
+    
+    async def list_prompts(self):
+        """List all available prompts."""
+        if not self.mcp_client.available_prompts:
+            print("No prompts available.")
+            return
+        
+        print("\nAvailable prompts:")
+        for prompt in self.mcp_client.available_prompts:
+            print(f"- {prompt['name']}: {prompt['description']}")
+            if prompt['arguments']:
+                print("  Arguments:")
+                for arg in prompt['arguments']:
+                    arg_name = arg.name if hasattr(arg, 'name') else arg.get('name', '')
+                    print(f"    - {arg_name}")
+    
+    async def execute_prompt(self, prompt_name, args):
+        """Execute a prompt with the given arguments."""
+        session = self.mcp_client.get_session_for_prompt(prompt_name)
+        if not session:
+            print(f"Prompt '{prompt_name}' not found.")
+            return
+        
+        try:
+            result = await session.get_prompt(prompt_name, arguments=args)
+            if result and result.messages:
+                prompt_content = result.messages[0].content
+                
+                # Extract text from content (handles different formats)
+                if isinstance(prompt_content, str):
+                    text = prompt_content
+                elif hasattr(prompt_content, 'text'):
+                    text = prompt_content.text
+                else:
+                    # Handle list of content items
+                    text = " ".join(item.text if hasattr(item, 'text') else str(item) 
+                                  for item in prompt_content)
+                
+                print(f"\nExecuting prompt '{prompt_name}'...")
+                await self.process_query(text)
+        except Exception as e:
+            print(f"Error: {e}")
+    
+    
+    async def cleanup(self):
+        """Clean up all connections."""
+        await self.mcp_client.cleanup()
+
+
+async def main():
+    agent = ResearchAgent()
+    try:
+        await agent.mcp_client.connect_to_servers()
+        chat = ChatInterface(agent)
+        await chat.start()
+    finally:
+        await agent.cleanup()
+
+
+def run():
+    """Entry point for the ResearchAgent client."""
+    asyncio.run(main())
+
+
+if __name__ == "__main__":
+    run()
+

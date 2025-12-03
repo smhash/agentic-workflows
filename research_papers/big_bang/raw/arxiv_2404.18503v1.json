@@ -1,0 +1,39 @@
+{
+  "source": "arxiv",
+  "query": "Big Bang",
+  "fetched_at": "2025-11-21T13:44:40.759540",
+  "title": "Did the Big Bang and cosmic inflation really happen? (A tale of alternative cosmological models)",
+  "url": "http://arxiv.org/abs/2404.18503v1",
+  "content": "A popular science article designed to introduce people familiar with basic cosmological nomenclature with models alternative to cosmological inflation. The paper briefly discusses the modern view of the Big Bang model, inflation (both its advantages and potential deficiencies). This is followed by a discussion of historical alternative models and modern approaches such as matter bounce, ekpyrotic Universe, Conformal Cyclic Cosmology, Hartle-Hawking state and loop quantum cosmology. The final aspect of the paper is to present the advantages and potential problems associated with alternative models and to present the conceptual challenges associated with the uniqueness of cosmology as a specific domain of physics.",
+  "authors": [
+    "Marcin Postolak"
+  ],
+  "summary": "A popular science article designed to introduce people familiar with basic cosmological nomenclature with models alternative to cosmological inflation. The paper briefly discusses the modern view of the Big Bang model, inflation (both its advantages and potential deficiencies). This is followed by a discussion of historical alternative models and modern approaches such as matter bounce, ekpyrotic Universe, Conformal Cyclic Cosmology, Hartle-Hawking state and loop quantum cosmology. The final aspect of the paper is to present the advantages and potential problems associated with alternative models and to present the conceptual challenges associated with the uniqueness of cosmology as a specific domain of physics.",
+  "pdf_url": "https://arxiv.org/pdf/2404.18503v1",
+  "entry_id": "http://arxiv.org/abs/2404.18503v1",
+  "published": "2024-04-29",
+  "updated": "2024-04-29",
+  "comment": "Popular science article created as part of the COST Action CA21136 (\"Addressing observational tensions in cosmology with systematics and fundamental physics\") CosmoVerse website: https://cosmoversetensions.eu/learn-cosmology/did-the-big-bang-and-cosmic-inflation-really-happen/",
+  "journal_ref": null,
+  "doi": null,
+  "primary_category": "physics.pop-ph",
+  "categories": [
+    "physics.pop-ph",
+    "astro-ph.CO",
+    "gr-qc"
+  ],
+  "links": [
+    {
+      "href": "https://arxiv.org/abs/2404.18503v1",
+      "rel": "alternate",
+      "title": null
+    },
+    {
+      "href": "https://arxiv.org/pdf/2404.18503v1",
+      "rel": "related",
+      "title": "pdf"
+    }
+  ],
+  "link_pdf": "https://arxiv.org/pdf/2404.18503v1",
+  "paper_id": "2404.18503v1"
+}
